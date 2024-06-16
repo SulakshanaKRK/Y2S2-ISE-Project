@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Philosopher&family=Poppins:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+:root {
+    --font-01: 'Poppins', sans-serif;
+    --font-02: 'Philosopher', sans-serif;
+
+    /* color  */
+    --global-color-0: #e41345;
+    --global-color-1: #f70077;
+    --global-color-2: #1a1a1a;
+    --global-color-3: #3e4359;
+    --global-color-4: #f7f7f7;
+    --global-color-5: #fff;
+    --global-color-6: #243673;
+    --global-color-7: #BFD1FF;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    position: absolute;
+    position: fixed;
+    /* position: relative; */
+    height: 86px;
+    width: 100%;
+    padding: 0 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99999999999999999999999;
+    transition: background-color 0.3s; /* Smooth transition for color change */
+}
+
+header.scrolled {
+    background-color: rgba(67, 67, 67,0.9); /* Color when scrolled */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /*Add shadow when scrolled */
+}
+
+header .logo {
+    color: var(--global-color-1);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: xx-large;
+    font-family: var(--font-02);
+    text-shadow: .5px .5px 3px var(--global-color-1);
+    transition: .4s;
+}
+
+header .logo:hover {
+    transform: scale(1.1);
+}
+
+header ul {
+    position: relative;
+}
+
+header ul li {
+    list-style: none;
+    float: left;
+    position: relative;
+}
+
+header ul li a {
+    font-size: 1.1em;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: #Fff;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    transition: all .4s ease;
+}
+
+header ul li a:hover {
+    color: var(--global-color-0);
+}
+
+header ul li #NavNum {
+    border: 2px solid var(--global-color-0);
+    padding: 20px 35px;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: 700;
+    color: #fff;
+}
+
+header ul li #NavNum:hover {
+    background-color: var(--global-color-0);
+}
+
+/* sectionFirst */
+.sectionFirst {
+    padding: 12rem 0% 15rem;
+}
+
+.sectionFirst::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/serviceBackGround.jpg");
+    z-index: -1;
+    opacity: .7;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sectionFirst h1 {
+    text-align: center;
+    font-size: 5rem;
+    font-family: var(--font-02);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    min-height: 100vh;
+    background: var(--global-color-5);
+    padding-bottom: 70px;
+}
+
+.container form {
+    padding: 20px;
+    width: 700px;
+    background: var(--global-color-5);
+    box-shadow: 0 10px 10px rgba(0,0,0,.1);
+}
+
+.container form .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.container form .row .col {
+    flex: 1 1 200px;
+}
+
+.container form .row .col .title {
+    font-size: 20px;
+    color: var(--global-color-3);
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.container form .row .col .inputBox {
+    margin: 15px 0;
+}
+
+.container form .row .col .inputBox span {
+    margin-bottom: 10px;
+    display:block;
+}
+
+.container form .row .col .inputBox input {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-transform: none;
+}
+
+.container form .row .col .inputBox input:focus {
+    border: 1px solid var(--global-color-2);
+}
+
+.container form .row .col .flex {
+    display: flex;
+    gap: 15px;
+}
+
+.container form .row .col .flex .inputBox {
+    margin-top: 5px;
+}
+
+.container form .row .col .flex .inputBox img {
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+}
+
+.container form .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    background: var(--global-color-1);
+    color: var(--global-color-5);
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.container form .submit-btn:hover {
+    background: var(--global-color-0);
+}
+
+.container form .row .col .inputBox select {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-transform: none;
+}
+
+.container form .row .col .inputBox select:focus {
+    border: 1px solid var(--global-color-2);
+}

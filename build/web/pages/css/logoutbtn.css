@@ -1,0 +1,21 @@
+
+.box44 {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+}
+
+.box44 a {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    background: var(--global-color-1); 
+    color: #fff;
+    padding: 7px 15px;
+    border-radius: 10px;
+    border-color: var(--global-color-1);
+    transition: 1s;
+    cursor: pointer;
+    
+}
+

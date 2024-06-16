@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Philosopher&family=Poppins:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+
+}
+
+:root {
+    --font-01: 'Poppins', sans-serif;
+    --font-02: 'Philosopher', sans-serif;
+
+    /* color  */
+    --global-color-0: #e41345;
+    --global-color-1: #f70077;
+    --global-color-2: #1a1a1a;
+    --global-color-3: #3e4359;
+    --global-color-4: #f7f7f7;
+    --global-color-5: #fff;
+    --global-color-6: #243673;
+    --global-color-7: #BFD1FF;
+
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    position: absolute;
+    position: fixed;
+    /* position: relative; */
+    height: 86px;
+    width: 100%;
+    padding: 0 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99999999999999999999999;
+    transition: background-color 0.3s; /* Smooth transition for color change */
+    
+
+    /* background-color: #1a1a1a; */
+    /* for sometime only after that we will remove it */
+}
+
+header.scrolled {
+    background-color: rgba(67, 67, 67,0.9); /* Color when scrolled */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /*Add shadow when scrolled */
+}
+
+
+header .logo {
+    color: var(--global-color-1);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: xx-large;
+    font-family: var(--font-02);
+
+    text-shadow: .5px .5px 3px var(--global-color-1);
+    transition: .4s;
+}
+
+header .logo:hover {
+    transform: scale(1.1);
+}
+
+header ul {
+    position: relative;
+}
+
+header ul li {
+    list-style: none;
+    float: left;
+    position: relative;
+}
+
+header ul li a {
+    font-size: 1.1em;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: #Fff;
+    display: flex;
+
+    justify-content: space-between;
+    font-weight: 500;
+    transition: all .4s ease;
+}
+
+header ul li a:hover {
+    color: var(--global-color-0);
+}
+
+header ul li #NavNum {
+    border: 2px solid var(--global-color-0);
+    padding: 20px 35px;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: 700;
+    color: #fff;
+}
+
+header ul li #NavNum:hover {
+    background-color: var(--global-color-0);
+}
+
+/* Now it's time to make it responsive  */
+@media (max-width:1024px) {
+
+    header {
+        padding: 10px;
+        overflow-x: visible;
+    }
+
+    header nav {
+        position: absolute;
+        width: 100%;
+        top: 88px;
+        left: 0;
+        display: none;
+    }
+
+    header.active nav {
+        display: block;
+    }
+
+    header ul li {
+        width: 100%;
+    }
+
+    header ul li a {
+        border: 1px solid #434343;
+        position: relative;
+        z-index: 3;
+        font-weight: 800;
+    }
+
+    header ul li a:hover {
+        color: var(--global-color-3);
+    }
+
+    header ul li a:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--global-color-1);
+        z-index: -1;
+        opacity: .8;
+    }
+
+    header ul li #NavNum {
+        width: fit-content;
+        display: none;
+    }
+
+
+    /* menuToggle */
+    .menuToggle {
+        position: relative;
+        width: 40px;
+        height: 50px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menuToggle::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        box-shadow: 0 12px #fff;
+        transform: translateY(-12px);
+
+    }
+
+    .menuToggle::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        transform: translateY(12px);
+    }
+
+    /* .active  */
+    header.active .menuToggle::before {
+        transform: rotate(45deg);
+        box-shadow: 0 0 #Fff;
+    }
+
+    header.active .menuToggle::after {
+        transform: rotate(315deg);
+    }
+
+    section.active {
+        position: relative;
+    }
+
+    section.active:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        z-index: 1;
+        opacity: .91;
+    }
+}
+
+
+
+/* for sometime  */
+.sectionFirst {
+    padding: 9rem 0% 13rem;
+    position: relative;
+    /* background-color: #272727; */
+    color: var(--global-color-4);
+    /* height: 100vh; */
+    /*we will remove it later*/
+}
+
+.sectionFirst h1{
+    text-align: center;
+    font-size: 70px;
+    font-family: var(--font-02);
+}
+
+
+.sectionFirst::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--global-color-2);
+    z-index: -1;
+    opacity: .7;
+}
+
+.sectionFirst::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: var(--global-color-2); */
+    background-image: url("../img/nailtop.jpg");
+    z-index: -1;
+    opacity: .7;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* transform-img */
+
+.transform-img {
+    padding: 0;
+    position: absolute;
+    width: 130%;
+    bottom: 0;
+    z-index: 9999;
+    /* height: 15%; */
+    /* display: flex; */
+}
+
+.transform-img img {
+    transform: rotate(180deg);
+    z-index: 2;
+    width: 100%;
+    height: 140%;
+    position: relative;
+    bottom: -7px;
+}
+
+
+
+
+
+/* Section Second */
+
+
+.aboutServices {
+    padding: 5rem 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: all .4s ease;
+}
+
+.aboutServices .ser-litText {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: var(--font-02);
+    text-align: center;
+    color: var(--global-color-1);
+}
+
+.aboutServices .ser-text {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.aboutServices .box {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    color: #fff;
+    text-decoration: none;
+    transition: all .4s ease;
+}
+
+.aboutServices .card-text{
+    line-height: normal;
+    font-size: medium;
+}
+
+.aboutServices .box .card .card-body .card-title{
+    line-height: normal;
+    color: var(--global-color-1);
+}
+
+.aboutServices .appointment {
+    text-align: right;
+    margin-top: 2rem;
+    margin-right: 25px;
+}
+
+.aboutServices .appointment .btn:hover {
+    background-color: var(--global-color-0); /* Red color - you can change this to the desired hover color */
+    color: #fff; /* White color - text color when button is hovered */
+    transition: background-color 0.3s;
+}
+
+
+
+
+
+/* before footer  */
+
+.beforefooter {
+    padding: 2rem 2%;
+
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    gap: 2rem;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.beforefooter .box {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.beforefooter .box .logo {
+    color: var(--global-color-1);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: xx-large;
+    font-family: var(--font-02);
+
+    text-shadow: .5px .5px 3px var(--global-color-1);
+    transition: .4s;
+    width: fit-content;
+}
+
+.beforefooter .box .logo:hover {
+    transform: scale(1.1);
+}
+
+.beforefooter .box .bf-text {
+    text-decoration: none;
+    /* font-weight: 600; */
+    font-size: xx-large;
+    font-family: var(--font-02);
+
+}
+
+.beforefooter .box a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.beforefooter .box .subscribe {
+    display: flex;
+}
+
+.beforefooter .box .subscribe input {
+    width: 60%;
+    height: 55px;
+    padding: .5rem;
+
+}
+
+.beforefooter .box .subscribe .btn {
+    border: none;
+    box-sizing: border-box;
+    background-color: none;
+    background-color: var(--global-color-1);
+    color: #fff;
+    padding: .8rem 2rem;
+    font-size: 20px;
+    transition: all .4s ease;
+}
+
+.beforefooter .box .subscribe .btn:hover {
+    background-color: var(--global-color-0);
+}
+
+.beforefooter .box .icons a {
+    border: 1px solid var(--global-color-1);
+    padding: .5rem;
+    background-color: var(--global-color-1);
+    transition: all .5s ease;
+}
+
+.beforefooter .box .icons a:hover {
+    background-color: var(--global-color-0);
+}
+
+.beforefooter .box .address {
+    padding-right: 1rem;
+}
+
+
+
+
+
+
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 2rem 2%;
+    background-color: #1a1a1a;
+    color: #fff;
+
+}

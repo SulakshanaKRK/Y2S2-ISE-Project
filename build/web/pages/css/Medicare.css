@@ -1,0 +1,86 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : May 1, 2024, 11:54:44 AM
+    Author     : Anarkalee
+*/
+.header {
+    font-size: 32px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: background-color 0.3s;
+    color: #f70077;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    z-index: 999; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('./Images/i1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif; 
+    color: #000000; 
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #f70077;
+    border-radius: 5px;
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+select,
+
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #f70077;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #f70077;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #f70077;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 1rem 1%;
+    background-color: #1a1a1a;
+    color: #fff;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}

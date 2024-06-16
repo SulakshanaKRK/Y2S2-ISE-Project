@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Philosopher&family=Poppins:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+
+}
+
+:root {
+    --font-01: 'Poppins', sans-serif;
+    --font-02: 'Philosopher', sans-serif;
+
+    /* color  */
+    --global-color-0: #e41345;
+    --global-color-1: #f70077;
+    --global-color-2: #1a1a1a;
+    --global-color-3: #3e4359;
+    --global-color-4: #f7f7f7;
+    --global-color-5: #fff;
+    --global-color-6: #243673;
+    --global-color-7: #BFD1FF;
+
+}
+
+.aboutServices .ser-litText {
+    color: var(--global-color-1); /* Change 'blue' to the color you prefer */
+    text-align: center; /* Center the text */
+    font: var(--font-01);
+    font-size: 20px;
+}
+
+.appointmentform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px; /* Adjust margin-top to center vertically */
+}
+.appointmentform form {
+    width: 300px; /* Adjust the width of the form */
+    border: 2px solid #ccc;
+    border-radius: 10px; /* Add rounded border */
+    padding: 20px; /* Add padding */
+    box-sizing: border-box; /* Include padding and border in the width */
+margin-bottom: 3rem;
+
+}
+
+
+.appointmentform form {
+    width: 300px; /* Adjust the width of the form */
+}
+
+.appointmentform label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.appointmentform select,
+.appointmentform input[type="tel"]
+.appointmentform input[type="date"],
+.appointmentform input[type="time"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.appointmentform input[type="submit"] {
+    width: 100%;
+    background-color: var(--global-color-0);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.appointmentform input[type="submit"]:hover {
+    background-color: var(--global-color-3);
+    color: var(--global-color-1);
+    font-weight: bold;
+}
+
+.appointmentform input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.appointmentform input[type="tel"]:focus {
+    border-color: var(--global-color-1); /* Change border color on focus */
+    outline: none; /* Remove default focus outline */
+}
+
+

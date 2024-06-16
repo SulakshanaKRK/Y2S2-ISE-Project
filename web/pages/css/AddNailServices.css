@@ -1,0 +1,45 @@
+/* Custom styles for form */
+.addServices form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style for form labels */
+  .addServices form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Style for form input fields and select dropdowns */
+  .addServices form input[type="url"],
+  .addServices form input[type="text"],
+  .addServices form input[type="number"],
+  .addServices form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  /* Style for submit button */
+  .addServices form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Hover effect for submit button */
+  .addServices form button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
